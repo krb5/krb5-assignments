@@ -1,0 +1,7 @@
+This repository contains registries for Kerberos 5 protocol number
+spaces which are not managed by IANA.  The information here was
+largely compiled by Taylor Yu, with some updates by Greg Hudson.
+
+If you need an assignment in one of these number spaces, send mail to
+ghudson@mit.edu with as much information about the proposed use as
+possible.

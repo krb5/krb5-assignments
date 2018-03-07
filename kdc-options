@@ -1,0 +1,27 @@
+This file contains registrations of Kerberos KDC-REQ options.  Send
+email to ghudson@mit.edu with corrections.  New options can only be
+assigned through standards action.
+
+Each entry should contain:
+* A number
+* A reference to the governing standard, with section number
+* A sybolic constant name from the governing standard (usually in
+  lowercase with hyphens)
+
+0    reserved (rfc4120 5.4.1)
+1    forwardable (rfc4120 2.6)
+2    forwarded (rfc4120 2.6)
+3    proxiable (rfc4120 2.5)
+4    proxy (rfc4120 2.5)
+5    allow-postdate (rfc4120 2.4)
+6    postdated (rfc4120 3.3.3)
+8    renewable (rfc4120 2.3)
+11   opt-hardware-auth (rfc4120 2.9.3)
+14   cname-in-addl-tkt (MS-SFU 2.2.3)
+15   canonicalize (rfc6806 3)
+16   anonymous (rfc6112 3)
+26   disable-transited-check (rfc4120 1.2)
+27   renewable-ok (rfc4120 2.9.1)
+28   enc-tkt-in-skey (rfc4120 2.9.2)
+30   renew (rfc4120 2.3)
+31   validate (rfc4120 2.2)

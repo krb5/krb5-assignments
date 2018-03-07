@@ -1,0 +1,26 @@
+This file contains registrations of Kerberos ticket flags.  Send email
+to ghudson@mit.edu with corrections.  New ticket flags can only be
+assigned through standards action.
+
+Each entry should contain:
+* A number
+* A reference to the governing standard, with section number
+* A sybolic constant name from the governing standard (usually in
+  lowercase with hyphens)
+
+0    reserved (rfc4120)
+1    forwardable (rfc4120 2.6)
+2    forwarded (rfc4120 2.6)
+3    proxiable (rfc4120 2.5)
+4    proxy (rfc4120 2.5)
+5    may-postdate (rfc4120 2.4)
+6    postdated (rfc4120 2.4)
+7    invalid (rfc4120 2.2)
+8    renewable (rfc4120 2.3)
+9    initial (rfc4120 2.1)
+10   pre-authent (rfc4120 2.1)
+11   hw-authent (rfc4120 2.1)
+12   transited-policy-checked (rfc4120 1.2)
+13   ok-as-delegate (rfc4120 2.8)
+15   enc-pa-rep (rfc6806 11)
+16   anonymous (rfc6112 3)

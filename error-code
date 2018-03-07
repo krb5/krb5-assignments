@@ -1,0 +1,167 @@
+This file contains registrations of Kerberos error codes.  Send email
+to ghudson@mit.edu with corrections.  New error codes can only be
+assigned through standards action.
+
+Each entry should contain:
+* A number
+* A reference to the governing standard, with section number
+* A sybolic constant name from the governing standard (usually in
+  uppercase with underscores)
+* A description of the error code if one is included in the governing
+  standard
+
+0    KDC_ERR_NONE (rfc4120 7.5.9)
+        No error
+1    KDC_ERR_NAME_EXP (rfc4120 7.5.9)
+        Client's entry in database has expired
+2    KDC_ERR_SERVICE_EXP (rfc4120 7.5.9)
+        Server's entry in database has expired
+3    KDC_ERR_BAD_PVNO (rfc4120 7.5.9)
+        Requested protocol version number not supported
+4    KDC_ERR_C_OLD_MAST_KVNO (rfc4120 7.5.9)
+        Client's key encrypted in old master key
+5    KDC_ERR_S_OLD_MAST_KVNO (rfc4120 7.5.9)
+        Server's key encrypted in old master key
+6    KDC_ERR_C_PRINCIPAL_UNKNOWN (rfc4120 3.1.3)
+        Client not found in Kerberos database
+7    KDC_ERR_S_PRINCIPAL_UNKNOWN (rfc4120 7.5.9)
+        Server not found in Kerberos database
+8    KDC_ERR_PRINCIPAL_NOT_UNIQUE (rfc4120 7.5.9)
+        Multiple principal entries in database
+9    KDC_ERR_NULL_KEY (rfc4120 7.5.9)
+        The client or server has a null key
+10   KDC_ERR_CANNOT_POSTDATE (rfc4120 3.1.3)
+        Ticket not eligible for postdating
+11   KDC_ERR_NEVER_VALID (rfc4120 3.1.3)
+        Requested starttime is later than end time
+12   KDC_ERR_POLICY (rfc4120 7.5.9)
+        KDC policy rejects request
+13   KDC_ERR_BADOPTION (rfc4120 7.5.9)
+        KDC cannot accommodate requested option
+14   KDC_ERR_ETYPE_NOSUPP (rfc4120 3.1.3)
+        KDC has no support for encryption type
+15   KDC_ERR_SUMTYPE_NOSUPP (rfc4120 3.3.2)
+        KDC has no support for checksum type
+16   KDC_ERR_PADATA_TYPE_NOSUPP (rfc4120 3.3.2)
+        KDC has no support for padata type
+17   KDC_ERR_TRTYPE_NOSUPP (rfc4120 3.3.3)
+        KDC has no support for transited type
+18   KDC_ERR_CLIENT_REVOKED (rfc4120 7.5.9)
+        Clients credentials have been revoked
+19   KDC_ERR_SERVICE_REVOKED (rfc4120 7.5.9)
+        Credentials for server have been revoked
+20   KDC_ERR_TGT_REVOKED (rfc4120 7.5.9)
+        TGT has been revoked
+21   KDC_ERR_CLIENT_NOTYET (rfc4120 7.5.9)
+        Client not yet valid; try again later
+22   KDC_ERR_SERVICE_NOTYET (rfc4120 7.5.9)
+        Server not yet valid; try again later
+23   KDC_ERR_KEY_EXPIRED (rfc4120 7.5.9)
+        Password has expired; change password to reset
+24   KDC_ERR_PREAUTH_FAILED (rfc4120 3.1.3)
+        Pre-authentication information was invalid
+25   KDC_ERR_PREAUTH_REQUIRED (rfc4120 2.9.3)
+        Additional pre-authentication required
+26   KDC_ERR_SERVER_NOMATCH (rfc4120 7.5.9)
+        Requested server and ticket don't match
+27   KDC_ERR_MUST_USE_USER2USER (rfc4120 7.5.9)
+        Server principal valid for user2user only
+28   KDC_ERR_PATH_NOT_ACCEPTED (rfc4120 7.5.9)
+        KDC Policy rejects transited path
+29   KDC_ERR_SVC_UNAVAILABLE (rfc4120 7.5.9)
+        A service is not available
+31   KRB_AP_ERR_BAD_INTEGRITY (rfc4120 3.2.3)
+        Integrity check on decrypted field failed
+32   KRB_AP_ERR_TKT_EXPIRED (rfc4120 3.2.3)
+        Ticket expired
+33   KRB_AP_ERR_TKT_NYV (rfc4120 3.2.3)
+        Ticket not yet valid
+34   KRB_AP_ERR_REPEAT (rfc4120 3.2.3)
+        Request is a replay
+35   KRB_AP_ERR_NOT_US (rfc4120 7.5.9)
+        The ticket isn't for us
+36   KRB_AP_ERR_BADMATCH (rfc4120 3.2.3)
+        Ticket and authenticator don't match
+37   KRB_AP_ERR_SKEW (rfc4120 3.2.3)
+        Clock skew too great
+38   KRB_AP_ERR_BADADDR (rfc4120 3.2.3)
+        Incorrect net address
+39   KRB_AP_ERR_BADVERSION (rfc4120 3.4.2)
+        Protocol version mismatch
+40   KRB_AP_ERR_MSG_TYPE (rfc4120 3.2.3)
+        Invalid msg type
+41   KRB_AP_ERR_MODIFIED (rfc4120 3.3.2)
+        Message stream modified
+42   KRB_AP_ERR_BADORDER (rfc4120 3.4.2)
+        Message out of order
+43   KRB5KRB_AP_ERR_ILL_CR_TKT (MIT krb5, Heimdal)
+        Illegal cross-realm ticket
+44   KRB_AP_ERR_BADKEYVER (rfc4120 3.2.3)
+        Specified version of key is not available
+45   KRB_AP_ERR_NOKEY (rfc4120 3.2.3)
+        Service key not available
+46   KRB_AP_ERR_MUT_FAIL (rfc4120 7.5.9)
+        Mutual authentication failed
+47   KRB_AP_ERR_BADDIRECTION (rfc4120 7.5.9)
+        Incorrect message direction
+48   KRB_AP_ERR_METHOD (rfc4120 7.5.9)
+        Alternative authentication method required
+49   KRB_AP_ERR_BADSEQ (rfc4120 7.5.9)
+        Incorrect sequence number in message
+50   KRB_AP_ERR_INAPP_CKSUM (rfc4120 3.3.2)
+        Inappropriate type of checksum in message
+51   KRB_AP_PATH_NOT_ACCEPTED (rfc4120 7.5.9)
+        Policy rejects transited path
+52   KRB_ERR_RESPONSE_TOO_BIG (rfc4120 7.2.1)
+        Response too big for UDP; retry with TCP
+60   KRB_ERR_GENERIC (rfc4120 7.5.9)
+        Generic error (description in e-text)
+61   KRB_ERR_FIELD_TOOLONG (rfc4120 7.2.2)
+        Field is too long for this implementation
+62   KDC_ERR_CLIENT_NOT_TRUSTED (rfc4120 7.5.9, rfc4556 3.1.3)
+64   KDC_ERR_INVALID_SIG (rfc4120 7.5.9, rfc4556 3.1.3)
+65   KDC_ERR_DH_KEY_PARAMETERS_NOT_ACCEPTED (rfc4556 3.1.3)
+67   KRB_AP_ERR_NO_TGT (rfc4120 7.5.9)
+        No TGT available to validate USER-TO-USER
+68   KDC_ERR_WRONG_REALM (rfc4120 7.5.9, rfc6806 7)
+69   KRB_AP_ERR_USER_TO_USER_REQUIRED (rfc4120 7.5.9)
+        Ticket must be for USER-TO-USER
+70   KDC_ERR_CANT_VERIFY_CERTIFICATE (rfc4120 7.5.9, rfc4556 3.2.2)
+71   KDC_ERR_INVALID_CERTIFICATE (rfc4120 7.5.9, rfc4556 3.2.2)
+72   KDC_ERR_REVOKED_CERTIFICATE (rfc4120 7.5.9, rfc4556 3.2.2)
+73   KDC_ERR_REVOCATION_STATUS_UNKNOWN (rfc4120 7.5.9, rfc4556 3.2.2)
+75   KDC_ERR_CLIENT_NAME_MISMATCH (rfc4120 7.5.9, rfc4556 3.2.2)
+77   KDC_ERR_INCONSISTENT_KEY_PURPOSE (rfc4556 3.2.2)
+78   KDC_ERR_DIGEST_IN_CERT_NOT_ACCEPTED (rfc4556 3.2.2)
+79   KDC_ERR_PA_CHECKSUM_MUST_BE_INCLUDED (rfc4556 3.2.3)
+80   KDC_ERR_DIGEST_IN_SIGNED_DATA_NOT_ACCEPTED (rfc4556 3.2.2)
+81   KDC_ERR_PUBLIC_KEY_ENCRYPTION_NOT_SUPPORTED (rfc4556 3.2.3)
+82   KRB_AP_ERR_PRINCIPAL_UNKNOWN (rfc6111 3.1)
+83   KRB_AP_ERR_REALM_UNKNOWN (rfc6111 3.2)
+84   KRB_AP_ERR_PRINCIPAL_RESERVED (rfc6111 3.2)
+85   KRB_AP_ERR_IAKERB_KDC_NOT_FOUND (draft-ietf-kitten-iakerb-03 3)
+86   KRB_AP_ERR_IAKERB_KDC_NO_RESPONSE (draft-ietf-kitten-iakerb-03 3)
+90   KDC_ERR_PREAUTH_EXPIRED (rfc6113 5.2)
+91   KDC_ERR_MORE_PREAUTH_DATA_REQUIRED (rfc6113 5.2)
+92   KDC_ERR_PREAUTH_BAD_AUTHENTICATION_SET (rfc6113 5.3)
+93   KDC_ERR_UNKNOWN_CRITICAL_FAST_OPTIONS (rfc6113 5.4.2)
+94   KDC_ERR_INVALID_HASH_ALG (rfc6560 3.4)
+95   KDC_ERR_INVALID_ITERATION_COUNT (rfc6560 3.4)
+96   KDC_ERR_PIN_EXPIRED (rfc6560 2.3)
+97   KDC_ERR_PIN_REQUIRED (rfc6560 3.4)
+100  KDC_ERR_NO_ACCEPTABLE_KDF (draft-ietf-kitten-pkinit-alg-agility-01 6)
+
+The following are outdated or deprecated assignments:
+
+63   KDC_ERR_KDC_NOT_TRUSTED (rfc4120 7.5.9)
+        Reserved for PKINIT
+65   KDC_ERR_KEY_TOO_WEAK (rfc4120 7.5.9)
+        Reserved for PKINIT
+66   KDC_ERR_CERTIFICATE_MISMATCH (rfc4120 7.5.9)
+        Reserved for PKINIT
+74   KDC_ERR_REVOCATION_STATUS_UNAVAILABLE (rfc4120 7.5.9)
+        Reserved for PKINIT
+76   KDC_ERR_KDC_NAME_MISMATCH (rfc4120 7.5.9)
+        Reserved for PKINIT
+82   KDC_ERR_NO_ACCEPTABLE_KDF (draft-ietf-krb-wg-pkinit-alg-agility-07 6)
+        (Changed to 100 due to conflict with rfc6111)

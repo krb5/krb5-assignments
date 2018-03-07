@@ -1,0 +1,13 @@
+This file contains registrations of Kerberos AP-REQ options.  Send
+email to ghudson@mit.edu with corrections.  New options can only be
+assigned through standards action.
+
+Each entry should contain:
+* A number
+* A reference to the governing standard, with section number
+* A sybolic constant name from the governing standard (usually in
+  lowercase with hyphens)
+
+0    reserved (rfc4120 5.5.1)
+1    use-session-key (rfc4120 3.2.3)
+2    mutual-required (rfc4120 3.2.4)

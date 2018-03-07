@@ -1,0 +1,49 @@
+This file contains registrations of Kerberos ad-type values.  Send
+email to ghudson@mit.edu with corrections or requests for new
+assignments.
+
+Each entry should contain:
+* A number
+* A reference to the governing standard, with section number
+* A symbolic constant name from the governing standard, preferrably
+  the name of the ASN.1 type associated with the number (usually in
+  uppercase with hyphens)
+
+A number may have multiple entries if there is a conflict.  The only
+known conflicts are for ad-type 142, which has been resolved by moving
+AD-SIGNTICKET to ad-type 512, and ad-type 143, where the conflict can
+easily be resolved based on the type of protocol operation.
+
+1    AD-IF-RELEVANT (rfc4120 7.5.4)
+2    AD-INTENDED-FOR-SERVER (rfc4120 7.5.4)
+3    AD-INTENDED-FOR-APPLICATION-CLASS (rfc4120 7.5.4)
+4    AD-KDC-ISSUED (rfc4120 7.5.4)
+5    AD-AND-OR (rfc4120 7.5.4)
+6    AD-MANDATORY-TICKET-EXTENSIONS (rfc4120 7.5.4)
+7    AD-IN-TICKET-EXTENSIONS (rfc4120 7.5.4)
+8    AD-MANDATORY-FOR-KDC (rfc4120 7.5.4)
+9    AD_INITIAL_VERIFIED_CAS (rfc4556 3.1.2)
+10-63 reserved  (rfc4120 7.5.4)
+64   OSF-DCE (rfc4120 7.5.4)
+65   SESAME (rfc4120 7.5.4)
+66   AD-OSF-DCE-PKI-CERTID (rfc4120 7.5.4)
+70   AD-authentication-strength (rfc6113 5.5)
+71   AD-fx-fast-armor (rfc6113 5.4.1.1)
+72   AD-fx-fast-used (rfc6113 5.4.2)
+80   AD-LOGIN-ALIAS (rfc6806 6)
+96   AD-CAMMAC (rfc7751 4)
+97   AD-AUTHENTICATION-INDICATOR (rfc8129 3)
+128  AD-WIN2K-PAC (rfc4120 7.5.4, MS-PAC)
+129  AD-ETYPE-NEGOTIATION (rfc4120 7.5.4, rfc4537 3)
+130  reserved (AD-AP-REP-USE-SUBKEY, details forthcoming)
+141  KERB-AD-RESTRICTION-ENTRY (MS-KILE 2.2.6)
+142  KERB-LOCAL (MS-KILE 2.2.4)
+143  AD-AUTH-DATA-AP-OPTIONS (MS-KILE 3.2.5.8)
+143  ad-pku2u-client-name (draft-zhu-pku2u-09 6.3)
+144  reserved (Microsoft; details unknown)
+145  reserved (Microsoft; details unknown)
+512  AD-SIGNTICKET (MIT krb5 and Heimdal S4U2Self evidence ticket)
+
+The following are outdated or deprecated assignments:
+
+142  AD-SIGNTICKET-OLD (conflicted with Microsoft)

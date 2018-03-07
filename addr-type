@@ -1,0 +1,26 @@
+This file contains registrations of Kerberos address types.  Send
+email to ghudson@mit.edu with corrections or requests for new assignments.
+
+Each entry should contain:
+* A number
+* A reference to the governing standard, with section number
+* A brief description of the address type
+
+Assignments should correspond to the numeric constants used in the
+Berkeley sockets API when possible.
+
+2    IPv4 (rfc4120 7.5.3)
+3    Directional (rfc4120 7.5.3)
+5    ChaosNet (rfc4120 7.5.3)
+6    XNS (rfc4120 7.5.3)
+7    ISO (rfc4120 7.5.3)
+12   DECNET Phase IV (rfc4120 7.5.3)
+16   AppleTalk DDP (rfc4120 7.5.3)
+20   NetBios (rfc4120 7.5.3)
+24   IPv6 (rfc4120 7.5.3)
+
+The following are not standardized assignments, but are noted here to
+avoid conflicts:
+
+256  address and port (MIT krb5, Heimdal)
+257  IP port number (MIT krb5, Heimdal)

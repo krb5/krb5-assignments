@@ -1,0 +1,116 @@
+This file contains registrations for Kerberos key usage numbers.  Send
+email to ghudson@mit.edu with corrections or requests for new assignments.
+
+Each entry should contain:
+* A number
+* A reference to the governing standard, with section number
+* A sybolic constant name if one is included in the governing standard
+* A description of the key usage value if one is included in the
+  governing standard, or a brief indication of the associated protocol
+  message if it is not obvious from the constant name
+
+Numbers may have multiple entries if there are conflicts.
+
+1    (rfc4120 5.2.7.2)
+        AS-REQ PA-ENC-TIMESTAMP padata timestamp, encrypted with the
+        client key
+2    (rfc4120 5.3)
+        AS-REP Ticket and TGS-REP Ticket (includes TGS session key or
+        application session key), encrypted with the service key
+3    (rfc4120 5.4.2)
+        AS-REP encrypted part (includes TGS session key or application
+        session key), encrypted with the client key
+4    (rfc4120 5.4.1)
+        TGS-REQ KDC-REQ-BODY AuthorizationData, encrypted with the TGS
+        session key
+5    (rfc4120 5.4.1)
+        TGS-REQ KDC-REQ-BODY AuthorizationData, encrypted with the TGS
+        authenticator subkey
+6    (rfc4120 5.5.1)
+        TGS-REQ PA-TGS-REQ padata AP-REQ Authenticator cksum, keyed
+        with the TGS session key
+7    (rfc4120 5.5.1)
+        TGS-REQ PA-TGS-REQ padata AP-REQ Authenticator (includes TGS
+        authenticator subkey), encrypted with the TGS session key
+8    (rfc4120 5.4.2)
+        TGS-REP encrypted part (includes application session key),
+        encrypted with the TGS session key
+9    (rfc4120 5.4.2)
+        TGS-REP encrypted part (includes application session key),
+        encrypted with the TGS authenticator subkey
+10   (rfc4120 5.5.1)
+        AP-REQ Authenticator cksum, keyed with the application session
+        key
+11   (rfc4120 5.5.1)
+        AP-REQ Authenticator (includes application authenticator
+        subkey), encrypted with the application session key
+12   (rfc4120 5.5.2)
+        AP-REP encrypted part (includes application session subkey),
+        encrypted with the application session key
+13   (rfc4120 5.7.1)
+        KRB-PRIV encrypted part, encrypted with a key chosen by the
+        application
+14   (rfc4120 5.8.1)
+        KRB-CRED encrypted part, encrypted with a key chosen by the
+        application
+15   (rfc4120 5.6.1)
+        KRB-SAFE cksum, keyed with a key chosen by the application
+16   (rfc4120 7.5.1)
+        Reserved for future use in Kerberos and related protocols.
+17   (rfc4120 7.5.1)
+        Reserved for future use in Kerberos and related protocols.
+18   (rfc4120 7.5.1)
+        Reserved for future use in Kerberos and related protocols.
+19   (rfc4120 5.2.6.4)
+        AD-KDC-ISSUED checksum
+20   (rfc4120 7.5.1)
+        Reserved for future use in Kerberos and related protocols.
+21   (rfc4120 7.5.1)
+        Reserved for future use in Kerberos and related protocols.
+22  KG-USAGE-ACCEPTOR-SEAL (rfc4121 2)
+23  KG-USAGE-ACCEPTOR-SIGN (rfc4121 2)
+24  KG-USAGE-INITIATOR-SEAL (rfc4121 2)
+25  KG-USAGE-INITIATOR-SIGN (rfc4121 2)
+25   (draft-ietf-krb-wg-kerberos-sam-03 5.1.3)
+        sam-cksum checksum
+26   (draft-ietf-krb-wg-kerberos-sam-03 5.1)
+        sam-track-id encryption
+26   (MS-SFU 2.2.2)
+        PA-S4U-X509-USER checksum
+26   (draft-ietf-krb-wg-kerberos-referrals-11 8)
+        PA-SERVER-REFERRAL encryption (removed in -12 draft)
+27   (draft-ietf-krb-wg-kerberos-sam-03 5.3)
+        sam-enc-nonce-or-sad encryption
+27   (MS-SFU 2.2.2)
+        PA-S4U-X509-USER reply checksum
+39   (rfc4430 8)
+        KINK_ENCRYPT payload (for encryption)
+40   (rfc4430 8)
+        Cksum field (for checksum)
+41  KEY_USAGE_FINISHED (draft-zhu-pku2u-09 6.3)
+42
+        reserved to avoid conflict due to published typos
+43   (rfc6542 3.2)
+        channel binding MIC
+44  KEY_USAGE_PA_PKINIT_KX (rfc8062 7)
+45  KEY_USAGE_OTP_REQUEST (rfc6560 3.3)
+46  KEY_USAGE_OTP_CONFIRM (draft-ietf-krb-wg-otp-preauth-12 4.3)
+        (removed in -13 draft)
+50  KEY_USAGE_FAST_REQ_CHKSUM (rfc6113 5.4.2)
+51  KEY_USAGE_FAST_ENC (rfc6113 5.4.2)
+52  KEY_USAGE_FAST_REP (rfc6113 5.4.3)
+53  KEY_USAGE_FAST_FINISHED (rfc6113 5.4.3)
+54  KEY_USAGE_ENC_CHALLENGE_CLIENT (rfc6113 5.4.6)
+55  KEY_USAGE_ENC_CHALLENGE_KDC (rfc6113 5.4.6)
+56  KEY_USAGE_AS_REQ (rfc6803 11)
+60  KEY_USAGE_GSSEAP_CHBIND_MIC (rfc7055 5.6.2)
+61  KEY_USAGE_GSSEAP_ACC_TOKEN_MIC (rfc7055 5.6.3)
+62  KEY_USAGE_GSSEAP_INI_TOKEN_MIC (rfc7055 5.6.3)
+64   (rfc7751 4)
+        Verifier-MAC checksum
+65  KEY_USAGE_SPAKE (draft-ietf-krb-wg-spake-preauth 4.3)
+512-1023 (rfc4120 7.5.1)
+        Reserved for uses internal to a Kerberos implementation.
+1024 (rfc4120 7.5.1)
+        Encryption for application use in protocols that do not
+        specify key usage values

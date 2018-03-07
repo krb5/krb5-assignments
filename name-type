@@ -1,0 +1,42 @@
+This file contains registrations of Kerberos name-type values.  Send
+email to ghudson@mit.edu with corrections or requests for new
+assignments.
+
+Each entry should contain:
+* A number
+* A reference to the governing standard, with section number
+* A symbolic constant name from the governing standard (usually in
+  uppercase with hyphens)
+* A description of the key usage value if one is included in the
+  governing standard
+
+0    NT-UNKNOWN (rfc4120 7.5.8)
+        Name type not known
+1    NT-PRINCIPAL (rfc4120 7.5.8)
+        Just the name of the principal as in DCE, or for users
+2    NT-SRV-INST (rfc4120 7.5.8)
+        Service and other unique instance (krbtgt)
+3    NT-SRV-HST (rfc4120 7.5.8)
+        Service with host name as instance (telnet, rcommands)
+4    NT-SRV-XHST (rfc4120 7.5.8)
+        Service with host as remaining components
+5    NT-UID (rfc4120 7.5.8)
+        Unique ID
+6    NT-X500-PRINCIPAL (rfc4120 7.5.8)
+        Encoded X.509 Distinguished name [RFC2253]
+7    NT-SMTP-NAME (rfc4120 7.5.8)
+        Name in form of SMTP email name (e.g., user@example.com)
+10   NT-ENTERPRISE (rfc4120 7.5.8, rfc6806 5)
+        Enterprise name; may be mapped to principal name
+11   KRB5_NT_WELLKNOWN (rfc6111 3.1)
+12   NTT-SRVT-HST-DOMAIN (rfc5179 1)
+
+The following are not standardized assignments, but are noted here to
+avoid conflicts:
+
+-128 KRB5_NT_MS_PRINCIPAL (MIT krb5, Heimdal)
+        Windows 2000 UPN and SID
+-129 KRB5_NT_MS_PRINCIPAL_AND_ID (MIT krb5, Heimdal)
+        NT 4 style name
+-130 KRB5_NT_ENT_PRINCIPAL_AND_ID (MIT krb5, Heimdal)
+        NT 4 style name and SID
