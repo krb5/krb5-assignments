@@ -55,10 +55,8 @@ Numbers may have multiple entries if there are conflicts.
         application
 15   (rfc4120 5.6.1)
         KRB-SAFE cksum, keyed with a key chosen by the application
-16   (rfc4120 7.5.1)
-        Reserved for future use in Kerberos and related protocols.
-17   (rfc4120 7.5.1)
-        Reserved for future use in Kerberos and related protocols.
+16   KERB_NON_KERB_SALT (MS-KILE 3.1.5.9, MS-PAC 2.6.1)
+17   KERB_NON_KERB_CKSUM_SALT (MS-KILE 3.1.5.9, MS-PAC 2.8.1)
 18   (rfc4120 7.5.1)
         Reserved for future use in Kerberos and related protocols.
 19   (rfc4120 5.2.6.4)
@@ -114,3 +112,19 @@ Numbers may have multiple entries if there are conflicts.
 1024 (rfc4120 7.5.1)
         Encryption for application use in protocols that do not
         specify key usage values
+
+The following are informational notes for values in the 512-1023
+range:
+
+513 KEY_USAGE_PA_FX_COOKIE (MIT krb5 encrypted FAST cookie)
+514 KEY_USAGE_PA_AS_FRESHNESS (MIT krb5 freshness tokens)
+
+RFC 3961 and RFC 4120 specify key usage values as unsigned, but in
+practice there is some use of negative values (which are encoded as
+two's complement when used in key derivation).  The following are
+informational notes for negative values:
+
+-18 KU_DIGEST_ENCRYPT (Heimdal digest service)
+-19 KU_DIGEST_OPAQUE (Heimdal digest service)
+-21 KU_KRB5SIGNEDPATH (Heimdal and MIT krb5 S4U2Proxy without PACs)
+-25 KU_H5L_COOKIE (Heimdal encrypted FAST cookie)
