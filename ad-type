@@ -43,6 +43,7 @@ easily be resolved based on the type of protocol operation.
 144  reserved (Microsoft; details unknown)
 145  reserved (Microsoft; details unknown)
 512  AD-SIGNTICKET (MIT krb5 and Heimdal S4U2Self evidence ticket)
+513  AD-DIAMETER (draft-vanrein-krb5-authzdata-diameter-01 2)
 
 The following are outdated or deprecated assignments:
 
