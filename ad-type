@@ -48,6 +48,7 @@ easily be resolved based on the type of protocol operation.
 581  AD-BEARER-TOKEN-JWT (Heimdal for RFC6717 updates)
 582  AD-BEARER-TOKEN-SAML (Heimdal for RFC6717 updates)
 583  AD-BEARER-TOKEN-OIDC (Heimdal for RFC6717 updates)
+584  AD-CERT-REQ-AUTHORIZED (Heimdal for RFC6717 updates)
 
 The following are outdated or deprecated assignments:
 
